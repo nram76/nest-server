@@ -92,4 +92,12 @@ export class AuthService {
 
     return this.jwt.signAsync(payload, { secret: jwtSecret });
   }
+
+  async homeCheck(){
+    try{
+      return 'home reached!'
+    } catch (error) {
+      return error;
+    }
+  }
 }
